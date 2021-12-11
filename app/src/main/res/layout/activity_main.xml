@@ -2,39 +2,49 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/input1View"
-        android:layout_width="162dp"
+        android:layout_width="139dp"
         android:layout_height="82dp"
+        android:background="@drawable/borders"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
         android:id="@+id/input2View"
         android:layout_width="139dp"
-        android:layout_height="80dp"
+        android:layout_height="82dp"
+        android:background="@drawable/borders"
         android:ems="10"
+        android:gravity="center"
         android:inputType="number"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/resultView"
         android:layout_width="0dp"
         android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/borders"
         android:gravity="center"
-        android:text="Result"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/input2View" />
 
     <Button
@@ -138,34 +148,40 @@
 
     <Button
         android:id="@+id/vRes"
-        android:layout_width="105dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#82F102"
         android:text="="
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/v3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/v6" />
+        app:layout_constraintStart_toEndOf="@+id/v3"
+        app:layout_constraintTop_toTopOf="@+id/v3" />
 
     <Button
         android:id="@+id/vPlus"
-        android:layout_width="0dp"
-        android:layout_height="104dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#DD0D0D"
         android:text="+"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/vMinus"
-        app:layout_constraintEnd_toEndOf="@+id/vMinus"
-        app:layout_constraintStart_toStartOf="@+id/vMinus" />
+        app:layout_constraintStart_toEndOf="@+id/v9"
+        app:layout_constraintTop_toTopOf="@+id/v9" />
 
     <Button
         android:id="@+id/vMinus"
-        android:layout_width="0dp"
-        android:layout_height="103dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#29A5DD"
         android:text="-"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/vRes"
-        app:layout_constraintEnd_toEndOf="@+id/vRes"
-        app:layout_constraintStart_toStartOf="@+id/vRes" />
+        app:layout_constraintBottom_toTopOf="@+id/v3"
+        app:layout_constraintStart_toEndOf="@+id/v6"
+        app:layout_constraintTop_toTopOf="@+id/v6" />
 
     <TextView
         android:id="@+id/vOper"
@@ -174,6 +190,7 @@
         android:gravity="center_vertical|right"
         android:textAlignment="center"
         android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/input2View"
         app:layout_constraintStart_toEndOf="@+id/input1View"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
